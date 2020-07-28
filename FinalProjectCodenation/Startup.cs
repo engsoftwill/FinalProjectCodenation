@@ -40,7 +40,6 @@ namespace FinalProjectCodenation
 
             //    services.AddTransient<IRepository, Repository>();
 
-
             services.AddScoped<ILogRepository, LogRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ISectorRepository, SectorRepository>();
