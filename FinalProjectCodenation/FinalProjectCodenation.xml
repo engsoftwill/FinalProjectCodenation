@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FinalProjectCodenation</name>
+    </assembly>
+    <members>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetAll">
+            <summary>
+            Método retorna lista de todos os Logs salvos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetbyId(System.Int32)">
+            <summary>
+            Método retorna os parametros do Log informado por meio de seu id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetbySectorId(System.Int32)">
+            <summary>
+            Método retorna lista de todos os Logs salvos provenientes do Setor com o id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.Post(FinalProjectCodenation.V1.Dtos.LogDto)">
+            <summary>
+            Salva novo Log de Erro
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.Put(System.Int32,FinalProjectCodenation.V1.Dtos.LogDto)">
+            <summary>
+            Atualiza novo Log de Erro
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.Delete(System.Int32)">
+            <summary>
+            Deleta Erro com o id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.SectorController.GetAll">
+            <summary>
+            Método retorna lista de todos os Setores do Negócio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.SectorController.GetbyId(System.Int32)">
+            <summary>
+            Método retorna o Setores do Negócio relacionado ao id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.SectorController.Post(FinalProjectCodenation.V1.Dtos.SectorDto)">
+            <summary>
+            adiciona novo setor ao Negócio
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.SectorController.Put(System.Int32,FinalProjectCodenation.V1.Dtos.SectorDto)">
+            <summary>
+            atualiza o setor no Negócio com o id informado
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.SectorController.Delete(System.Int32)">
+            <summary>
+            Deleta setor no Negocio com o id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.UserController.GetAll">
+            <summary>
+            Método retorna lista de todos os Usuários Cadastrados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.UserController.GetbyId(System.Int32)">
+            <summary>
+            Método retorna o Usuário relacionado ao id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.UserController.Post(FinalProjectCodenation.V1.Dtos.UserDto)">
+            <summary>
+            Adiciona novo usuario
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.UserController.Put(System.Int32,FinalProjectCodenation.V1.Dtos.UserDto)">
+            <summary>
+            atualiza o usuario que possuir o id informado
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            deleta o usuario com o id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
