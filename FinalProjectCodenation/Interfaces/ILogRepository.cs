@@ -13,7 +13,11 @@ namespace FinalProjectCodenation.Interfaces
         void Update<T>(T entity) where T : class;
         bool SaveChanges();
         Log[] GetLogsbySector(int sectorId, bool includeUser = false);
-        Log[] GetAllLogs(bool includeUser = false);
-        Log GetLogbyId(int logId, bool includeUser = false);
+        Log[] GetAllLogsOrderByName(bool includeUser = false);
+        Log[] GetAllLogsOrderByLevel(bool includeUser = false);
+        Log[] GetAllLogsOrderByEvents(bool includeUser = false);
+        Log[] GetLogbyLevel(string level, bool includeUser = false);
+        Log[] GetLogbyDescription(string description, bool includeUser = false);
+        Log[] GetLogbyOrigin(string origin, bool includeUser = false);
     }
 }

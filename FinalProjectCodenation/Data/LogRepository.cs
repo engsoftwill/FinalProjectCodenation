@@ -84,7 +84,8 @@ namespace FinalProjectCodenation.Data
             return query.ToArray();
         }
 
-        public Log[] GetLogsbyLevel(string level, bool includeUser = false)
+
+        public Log[] GetLogbyLevel(string level, bool includeUser = false)
         {
             IQueryable<Log> query = _context.Logs;
 
@@ -93,7 +94,7 @@ namespace FinalProjectCodenation.Data
             return query.ToArray();
         }
 
-        public Log[] GetLogsbyDescription(string description, bool includeUser = false)
+        public Log[] GetLogbyDescription(string description, bool includeUser = false)
         {
             IQueryable<Log> query = _context.Logs;
 
@@ -102,7 +103,7 @@ namespace FinalProjectCodenation.Data
             return query.ToArray();
         }
 
-        public Log[] GetLogsbyOrigin(string origin, bool includeUser = false)
+        public Log[] GetLogbyOrigin(string origin, bool includeUser = false)
         {
             IQueryable<Log> query = _context.Logs;
 
@@ -110,6 +111,5 @@ namespace FinalProjectCodenation.Data
 
             return query.ToArray();
         }
-        
     }
 }
