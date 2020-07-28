@@ -55,7 +55,27 @@ namespace FinalProjectCodenation.Data
             return query.ToArray();
         }
 
-        public Log[] GetAllLogs(bool includeUser = false)
+       
+
+        public Log[] GetAllLogsOrderByName(bool includeUser = false)
+        {
+            IQueryable<Log> query = _context.Logs;
+
+            query = query.AsNoTracking().OrderBy(a => a.Name);
+
+            return query.ToArray();
+        }
+
+        public Log[] GetAllLogsOrderByLevel(bool includeUser = false)
+        {
+            IQueryable<Log> query = _context.Logs;
+
+            query = query.AsNoTracking().OrderBy(a => a.Level);
+
+            return query.ToArray();
+        }
+
+        public Log[] GetAllLogsOrderByEvents(bool includeUser = false)
         {
             IQueryable<Log> query = _context.Logs;
 
@@ -64,5 +84,32 @@ namespace FinalProjectCodenation.Data
             return query.ToArray();
         }
 
+        public Log[] GetLogsbyLevel(string level, bool includeUser = false)
+        {
+            IQueryable<Log> query = _context.Logs;
+
+            query = query.AsNoTracking().OrderBy(a => a.Id).Where(x => x.Level == level);
+
+            return query.ToArray();
+        }
+
+        public Log[] GetLogsbyDescription(string description, bool includeUser = false)
+        {
+            IQueryable<Log> query = _context.Logs;
+
+            query = query.AsNoTracking().OrderBy(a => a.Id).Where(x => x.Description == description);
+
+            return query.ToArray();
+        }
+
+        public Log[] GetLogsbyOrigin(string origin, bool includeUser = false)
+        {
+            IQueryable<Log> query = _context.Logs;
+
+            query = query.AsNoTracking().OrderBy(a => a.Id).Where(x => x.Origin == origin);
+
+            return query.ToArray();
+        }
+        
     }
 }
