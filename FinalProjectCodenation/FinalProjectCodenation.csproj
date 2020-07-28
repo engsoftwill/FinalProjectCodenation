@@ -23,5 +23,10 @@
 	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="V2\" />
+    <Folder Include="V1\Auth\" />
+  </ItemGroup>
+
 
 </Project>

@@ -4,12 +4,6 @@
         <name>FinalProjectCodenation</name>
     </assembly>
     <members>
-        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetAll">
-            <summary>
-            Método retorna lista de todos os Logs salvos
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetbyId(System.Int32)">
             <summary>
             Método retorna os parametros do Log informado por meio de seu id
@@ -20,6 +14,27 @@
         <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetbySectorId(System.Int32)">
             <summary>
             Método retorna lista de todos os Logs salvos provenientes do Setor com o id informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.Getbylevel(System.String)">
+            <summary>
+            Método retorna lista de todos os Logs salvos provenientes do Setor com o level informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetbyDescription(System.String)">
+            <summary>
+            Método retorna lista de todos os Logs salvos provenientes do Setor com o description informado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FinalProjectCodenation.V1.Controllers.LogController.GetbyOrigin(System.String)">
+            <summary>
+            Método retorna lista de todos os Logs salvos provenientes do Setor com o origin informado
             </summary>
             <param name="id"></param>
             <returns></returns>

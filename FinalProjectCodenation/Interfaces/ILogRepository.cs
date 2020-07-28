@@ -19,5 +19,6 @@ namespace FinalProjectCodenation.Interfaces
         Log[] GetLogbyLevel(string level, bool includeUser = false);
         Log[] GetLogbyDescription(string description, bool includeUser = false);
         Log[] GetLogbyOrigin(string origin, bool includeUser = false);
+        Log GetLogbyId(int id, bool includeUser = false);
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FinalProjectCodenation.Data;
 using FinalProjectCodenation.Interfaces;
+using FinalProjectCodenation.V2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -39,7 +40,7 @@ namespace FinalProjectCodenation
 
             //    services.AddTransient<IRepository, Repository>();
 
-            services.AddScoped<IRepository, Repository>();
+
             services.AddScoped<ILogRepository, LogRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ISectorRepository, SectorRepository>();
@@ -65,6 +66,8 @@ namespace FinalProjectCodenation
                 Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //procura nas dll quem herda de profile
+
+            services.AddSwaggerDocumentation();
 
             foreach (var description in apiProviderDescription.ApiVersionDescriptions)
             {
@@ -99,6 +102,7 @@ namespace FinalProjectCodenation
                     var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
 
                     option.IncludeXmlComments(xmlCommentsFullPath);
+                    
                 });
 
             }
@@ -112,7 +116,8 @@ namespace FinalProjectCodenation
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseSwaggerDocumentation();
             }
 
             //app.UseHttpsRedirection();

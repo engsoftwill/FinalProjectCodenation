@@ -26,18 +26,7 @@ namespace FinalProjectCodenation.V1.Controllers
             _mapper = mapper;
             _repo = repo;
         }
-        /// <summary>
-        /// Método retorna lista de todos os Logs salvos
-        /// </summary>
-        /// <returns></returns>
-        // GET: api/<LogController>
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var logs= _repo.GetAllLogs();
-            var logsDto = _mapper.Map<IEnumerable<LogDto>>(logs);
-            return Ok(logsDto);
-        }
+        
         /// <summary>
         /// Método retorna os parametros do Log informado por meio de seu id
         /// </summary>
@@ -64,6 +53,49 @@ namespace FinalProjectCodenation.V1.Controllers
             var logDto = _mapper.Map<IEnumerable<LogDto>>(logs);
             return Ok(logDto);
         }
+
+        /// <summary>
+        /// Método retorna lista de todos os Logs salvos provenientes do Setor com o level informado
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{level}")]
+        public IActionResult Getbylevel(string level)
+        {
+            var logs = _repo.GetLogbyLevel(level);
+            var logDto = _mapper.Map<IEnumerable<LogDto>>(logs);
+            return Ok(logDto);
+        }
+
+        /// <summary>
+        /// Método retorna lista de todos os Logs salvos provenientes do Setor com o description informado
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{description}")]
+        public IActionResult GetbyDescription(string description)
+        {
+            var logs = _repo.GetLogbyDescription(description);
+            var logDto = _mapper.Map<IEnumerable<LogDto>>(logs);
+            return Ok(logDto);
+        }
+
+
+        /// <summary>
+        /// Método retorna lista de todos os Logs salvos provenientes do Setor com o origin informado
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{origin}")]
+        public IActionResult GetbyOrigin(string origin)
+        {
+            var logs = _repo.GetLogbyOrigin(origin);
+            var logDto = _mapper.Map<IEnumerable<LogDto>>(logs);
+            return Ok(logDto);
+        }
+
+
+
         /// <summary>
         /// Salva novo Log de Erro
         /// </summary>
